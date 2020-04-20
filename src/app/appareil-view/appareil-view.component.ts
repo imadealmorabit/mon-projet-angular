@@ -8,7 +8,7 @@ import {AppareilService} from '../services/appareil.service';
 })
 export class AppareilViewComponent implements OnInit {
 
-  isAuth = false;
+  // isAuth = false;
 
   lastUpdate = new Promise(
     (resolve, reject) => {
@@ -24,11 +24,11 @@ export class AppareilViewComponent implements OnInit {
   appareils: any[];
 
   constructor(private appareilService: AppareilService) {
-    setTimeout(
+  /*  setTimeout(
       () => {
         this.isAuth = true;
       }, 4000
-    );
+    );*/
   }
 
   ngOnInit(): void {
