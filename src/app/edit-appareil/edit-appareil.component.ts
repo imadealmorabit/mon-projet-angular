@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
+
+@Component({
+  selector: 'app-edit-appareil',
+  templateUrl: './edit-appareil.component.html',
+  styleUrls: ['./edit-appareil.component.scss']
+})
+export class EditAppareilComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  onSubmit(f: NgForm) {
+    console.log(f.value);
+  }
+}
