@@ -14,11 +14,12 @@
     </div>
     <div class="form-group">
       <label for="drinkPreference"> Quelle boisson preferez-vous ?</label>
-      <select id="drinkPreference" class="form-control" formControlName="drinkPreference"></select>
+      <select id="drinkPreference" class="form-control" formControlName="drinkPreference">
       <option value="Coca">Coca</option>
       <option value="Pepsi">Pepsi</option>
+      </select>
     </div>
-    <button class="btn btn-primary" type="submit">Soumettre</button>
+    <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">Soumettre</button>
   </form>
 </div>
 
