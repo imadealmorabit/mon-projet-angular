@@ -91,4 +91,19 @@ switchOffAll(){
       );
   }
 
+  getAppareilsFromServer(){
+
+    this.httpClient
+      .get<any[]>('https://http-client-demo-c49d0.firebaseio.com/appareils.json')
+      .subscribe(
+        (response) => {
+          this.appareils = response;
+          this.emitAppareilSubject();
+        },
+        (error) => {
+          console.log('Erreur de chargement !' + error);
+        }
+      );
+  }
+
 }
